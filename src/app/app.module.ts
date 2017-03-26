@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { AkomaComponent } from './akoma/akoma.component';
+import { ActViewerComponent } from './act-viewer/act-viewer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AkomaComponent
+    ActViewerComponent
   ],
   imports: [
     BrowserModule,
