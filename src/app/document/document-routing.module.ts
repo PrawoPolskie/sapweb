@@ -5,8 +5,8 @@ import { DocumentListComponent } from './document-list.component';
 import { DocumentComponent }     from './document.component';
 
 const documentRoutes: Routes = [
-  { path: 'document',     component: DocumentListComponent },
-  { path: 'document/:id', component: DocumentComponent }
+  { path: 'eli',     component: DocumentListComponent },
+  { path: 'eli/:id', component: DocumentComponent }
 ];
 
 @NgModule({

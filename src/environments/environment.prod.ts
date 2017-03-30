@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  basexUrl: 'http://aws:8984/'
+  basexUrl: 'http://52.28.117.138:8984/'
 };

@@ -14,7 +14,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class BasexService {
-  private prawoUrl = environment.basexUrl + '/rest/prawo';
+  private prawoUrl = environment.basexUrl + '/rest/';
   private res
 
   constructor(private http: Http) { }
