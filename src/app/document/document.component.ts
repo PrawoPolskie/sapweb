@@ -24,7 +24,9 @@ export class DocumentComponent implements OnInit {
 
   ngOnInit() {
     this.route.params
-      .switchMap((params: Params) => this.service.getDocumentById(params['id']))
+      .switchMap((params: Params) => this.service.getDocumentById(params['db'],
+                                                                  params['year'],
+                                                                  params['pos']))
       .subscribe((akoma: Akoma) => this.akoma = akoma);
   }
 }

@@ -19,7 +19,7 @@ export class BasexService {
 
   constructor(private http: Http) { }
 
-  getDocumentById(id: string): Observable<Akoma> {
+  getDocumentById(db: string, year: string, pos: string): Observable<Akoma> {
     let params = new URLSearchParams();
     params.set('method', 'json');
     params.set('json=format', 'jsonml');
@@ -31,7 +31,7 @@ export class BasexService {
     options.search = params;
     options.headers = headers;
 
-    return this.http.get(this.prawoUrl + '/' + id, options)
+    return this.http.get(this.prawoUrl + '/' + db + '/' + year + '/' + pos, options)
                     .map(this.extractData)
                     .catch(this.handleError);
 
