@@ -40,8 +40,7 @@ export class BasexService {
   private extractData(res: Response) {
     let body = res.json();
     console.log(body);
-    return new Akoma();
-//    return body.data || { };
+    return new Akoma(body);
   }
 
   private handleError (error: Response | any) {
