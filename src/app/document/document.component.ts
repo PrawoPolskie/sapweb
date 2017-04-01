@@ -15,6 +15,7 @@ import { ActivatedRoute,
 export class DocumentComponent implements OnInit {
 
   akoma: Akoma;
+  akomaRaw;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,6 +28,9 @@ export class DocumentComponent implements OnInit {
       .switchMap((params: Params) => this.service.getDocumentById(params['db'],
                                                                   params['year'],
                                                                   params['pos']))
-      .subscribe((akoma: Akoma) => this.akoma = akoma);
+      .subscribe((akoma: Akoma) => {
+        this.akoma = akoma;
+        this.akomaRaw = akoma.data;
+      });
   }
 }

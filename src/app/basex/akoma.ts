@@ -2,7 +2,7 @@
 
 export class Akoma {
 
-  constructor(data) {
+  constructor(public data) {
 //    console.log(query(data, '$..name'))
   }
 }
